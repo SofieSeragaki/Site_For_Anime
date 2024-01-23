@@ -4,12 +4,12 @@
     padding: 20px;
     background-color: #36393e;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    float: left; /* Придвижване на контейнера наляво */
+    float: left; 
 }
 
 #anime-details {
     text-align: center;
-    color: #ddd; /* Цвят на текста да бъде бял */
+    color: #ddd; 
 }
 
 #anime-image {
@@ -32,16 +32,16 @@ input, button {
 }
 
 #watch-links h2 {
-    color: white; /* Примерен цвят на текста */
+    color: white; 
 }
 
 #watch-links a {
     display: block;
     margin-top: 10px;
-    color: #7289da; /* Примерен цвят на линковете */
+    color: #7289da; 
     text-decoration: none;
 }
 
 #watch-links a:hover {
-    text-decoration: underline; /* Подчертаване при hover */
+    text-decoration: underline; 
 }
