@@ -22,14 +22,11 @@ function displayResults(data) {
             const animeCard = document.createElement('div');
             animeCard.className = 'anime-card';
 
-            // Добавяне на обработчик на клик
             animeCard.addEventListener('click', () => {
-                // Премахване на класа "selected" от всички елементи преди да го добавим към текущия
                 document.querySelectorAll('.anime-card').forEach(card => {
                     card.classList.remove('selected');
                 });
 
-                // Добавяне на класа "selected" към текущия елемент
                 animeCard.classList.add('selected');
 
                 redirectToDetailsPage(anime.attributes.titles.en || anime.attributes.canonicalTitle, anime.id);
@@ -40,7 +37,6 @@ function displayResults(data) {
             const image = document.createElement('img');
             image.src = anime.attributes.posterImage ? anime.attributes.posterImage.original : 'no-image.jpg';
             image.alt = 'Anime Poster';
-            // Добавяне на клас за управление на размерите на снимката
             image.className = 'anime-image';
             animeCard.appendChild(image);
 
@@ -60,17 +56,14 @@ function displayResults(data) {
 }
 
 function displayRandomResult(data, container) {
-    // Проверка дали елементът за показване на резултата е намерен преди продължаване
     if (!container) {
         console.error('Result container not found.');
         return;
     }
 
-    // Изчистване на предишни резултати
     container.innerHTML = '';
 
     if (data && data.data && data.data.length > 0) {
-        // Избиране на случайно аниме от върнатите резултати
         const randomIndex = Math.floor(Math.random() * data.data.length);
         const anime = data.data[randomIndex];
 
@@ -91,7 +84,6 @@ function displayRandomResult(data, container) {
         synopsis.textContent = anime.attributes.synopsis || 'No synopsis available.';
         animeCard.appendChild(synopsis);
 
-        // Добавяне на обработчик на клик за пренасочване към страницата с подробности
         animeCard.addEventListener('click', () => {
             redirectToDetailsPage(anime.attributes.titles.en || anime.attributes.canonicalTitle, anime.id);
         });
@@ -105,13 +97,11 @@ function displayRandomResult(data, container) {
 function getRandomAnime() {
     const randomResultContainer = document.getElementById('random-result');
 
-    // Проверка дали елементът е намерен преди продължаване
     if (!randomResultContainer) {
         console.error('Random result container not found.');
         return;
     }
 
-    // Изчистване на предишни резултати
     randomResultContainer.innerHTML = '';
 
     const countApiUrl = 'https://kitsu.io/api/edge/anime';
@@ -126,10 +116,7 @@ function getRandomAnime() {
         .then(data => {
             const totalCount = data.meta.count;
             
-            // Генериране на случаен индекс в интервала [0, totalCount)
             const randomIndex = Math.floor(Math.random() * totalCount);
-
-            // Извличане на конкретната страница, където се намира избраната случайно анимация
             const selectedPage = Math.floor(randomIndex / 10);
             
             const animeApiUrl = `https://kitsu.io/api/edge/anime?page[offset]=${selectedPage * 10}&page[limit]=1`;
@@ -160,13 +147,6 @@ function clearResults() {
 }
 
 function redirectToDetailsPage(animeTitle, animeId) {
-    // Формиране на URL за страницата с подробности
     const detailsPageUrl = `details.html?id=${animeId}`;
-
-    // Пренасочване на потребителя към страницата с подробности
     window.location.href = detailsPageUrl;
 }
-
-
-
-
