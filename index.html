@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #app {
+            max-width: 600px;
+            margin: 500px auto;
+            padding: 20px;
+            background-color: #36393e;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input, button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <body style="background-color:#282b30;"></body> 
+
+<!-- Navbar -->
+<div id="navbar">
+    <a href="#default" id="logo">Find Your Anime Here!</a>
+    <div id="navbar-right">
+        <a class="active" href="file:///C:/Users/User/Documents/%D0%B4%D0%BE%D0%BC%D0%B0%D0%A1%D0%BD%D0%B0/Anime%20site/index.html">Home</a>
+        <a href="#Contact">Contact</a>
+        <a href="#About">About</a>
+    </div>
+</div>
+
+<!--Content-->
+<div id="app">
+    <h1>Anime Search</h1>
+    <input type="text" id="search-input" placeholder="Enter anime title">
+    <button onclick="searchAnime()">Search</button>
+    <button onclick="getRandomAnime()">Random</button>
+    <button onclick="clearResults()">Clear</button>
+
+    <div id="results"></div>
+    <div id="random-result"></div>
+</div>
+
+<script src="scripts.js"></script>
+<script>
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("navbar").style.padding = "30px 10px";
+            document.getElementById("logo").style.fontSize = "25px";
+        } else {
+            document.getElementById("navbar").style.padding = "80px 10px";
+            document.getElementById("logo").style.fontSize = "35px";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+#details-app {
+    max-width: 600px;
+    margin: 50px;
+    padding: 20px;
+    background-color: #36393e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    float: left; /* Придвижване на контейнера наляво */
+}
+
+#anime-details {
+    text-align: center;
+    color: #ddd; /* Цвят на текста да бъде бял */
+}
+
+#anime-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+input, button {
+    margin: 10px;
+}
+
+
+
+
+#watch-links {
+    max-width: 400px;
+    text-align: left;
+    margin-top: 500px;
+}
+
+#watch-links h2 {
+    color: white; /* Примерен цвят на текста */
+}
+
+#watch-links a {
+    display: block;
+    margin-top: 10px;
+    color: #7289da; /* Примерен цвят на линковете */
+    text-decoration: none;
+}
+
+#watch-links a:hover {
+    text-decoration: underline; /* Подчертаване при hover */
+}
