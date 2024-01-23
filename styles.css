@@ -121,19 +121,18 @@ button {
 
 
 .anime-card {
-    /* Останалите стилове за anime-card */
-    cursor: pointer; /* Добавяме показател на мишката */
-    transition: color 0.3s; /* Добавяме transition за плавен ефект при промяна на цвета */
+    cursor: pointer; 
+    transition: color 0.3s; 
     color: #ddd;
 }
 
 .anime-card:hover {
-    text-decoration: underline; /* Подчертаваме текста при hover */
-    color: #7289da; /* Променяме цвета при hover */
+    text-decoration: underline; 
+    color: #7289da; 
 }
 
 .anime-card.selected {
-    color: #7289da; /* Цвят при клик */
-    text-decoration: none; /* Премахваме подчертаването при клик */
+    color: #7289da; 
+    text-decoration: none; 
 
 }
